@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Proview.CodeChallenge.BLL.ControlObject
 {
+    /// <summary>
+    /// This class is used to store the return data from Business Layer to Controller
+    /// </summary>
     public class ResultModel
     {
         public List<System.Object> Result { get; set; }

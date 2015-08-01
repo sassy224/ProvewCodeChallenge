@@ -1,4 +1,6 @@
-﻿    
+﻿/*
+ * This controller is used to display messages that are passed from other controllers to MessageService
+ */
 proview.app.controller("MessageController", MessageController);
 //Inject dependency
 MessageController.$inject = ['MessageService'];

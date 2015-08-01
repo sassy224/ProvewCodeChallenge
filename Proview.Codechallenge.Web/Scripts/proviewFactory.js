@@ -1,4 +1,7 @@
-﻿//Recommended way to declare
+﻿/*
+ * The main factory for communicating with server
+ */
+//Recommended way to declare
 proview.app.factory("ProviewFactory", ProviewFactory);
 //Inject
 ProviewFactory.$inject = ['$http', '$q'];

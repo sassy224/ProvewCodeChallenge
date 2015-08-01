@@ -8,13 +8,21 @@ using System.Linq;
 
 namespace Proview.CodeChallenge.BLL
 {
+    /// <summary>
+    /// This class is used to manipulate business logic for object UserInput
+    /// </summary>
     public class UserInputBL
     {
         /// <summary>
-        /// UnitOfWork
+        /// The UnitOfWork class that will hold the data context to be used
         /// </summary>
         private UnitOfWork unitOfWork = new UnitOfWork();
         
+        /// <summary>
+        /// Get objects of type UserInput
+        /// </summary>
+        /// <param name="paging">Object that holds data for filters and paging UserInput objects</param>
+        /// <returns>Object of type ResultModel</returns>
         public ResultModel GetUserInputs(PagingModel paging){
             var userInputs = unitOfWork.UserInputRepository.GetAll();
 
@@ -44,6 +52,12 @@ namespace Proview.CodeChallenge.BLL
             return new ResultModel(result, userInputsWithOrder.Count());
         }
 
+        /// <summary>
+        /// Add an UserInput object to database 
+        /// </summary>
+        /// <param name="expression">Value of the Expression column</param>
+        /// <param name="expressionResult">Value of the Result column</param>
+        /// <returns>true if added successfully, false otherwise</returns>
         public Boolean AddUserInput(String expression, String expressionResult)
         {
             try
@@ -64,6 +78,11 @@ namespace Proview.CodeChallenge.BLL
             return true;
         }
 
+        /// <summary>
+        /// Delete an UserInput object from database
+        /// </summary>
+        /// <param name="uId">Id of the UserInput object</param>
+        /// <returns>true if delete successfully, false otherwise</returns>
         public Boolean DeleteUserInput(int uId)
         {
             try

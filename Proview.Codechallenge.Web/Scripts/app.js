@@ -1,11 +1,14 @@
-﻿var proview = {};
+﻿/*
+ * The module that will be used throughout this project
+ */
+var proview = {};
 proview.app = angular.module("proviewApp", ['ajaxLoader', 'ui.bootstrap', 'trNgGrid', 'angular-confirm'])
 .run(function () {
-    //Change default settings
+    //Change default settings of trNgGrid
     TrNgGrid.defaultPagerMinifiedPageCountThreshold = 5;
 })
 .run(["$templateCache", function ($templateCache) {
-    //Overwrite pager template
+    //Overwrite pager template of trNgGrid
     $templateCache.put(
          TrNgGrid.footerPagerTemplateId,
          '<span class="pull-right form-group">'

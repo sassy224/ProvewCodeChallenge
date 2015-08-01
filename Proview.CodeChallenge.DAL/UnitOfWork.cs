@@ -7,9 +7,18 @@ using System.Threading.Tasks;
 
 namespace Proview.CodeChallenge.DAL
 {
+    /// <summary>
+    /// This class is used to shared database context class between multiple repositories
+    /// </summary>
     public class UnitOfWork : IDisposable
     {
+        /// <summary>
+        /// The single database context to be shared
+        /// </summary>
         private ProviewEntities context = new ProviewEntities();
+        /// <summary>
+        /// The repository that is responsible for manipulating data for table UserInput 
+        /// </summary>
         private IRepository<UserInput> userInputRepository;
 
         public IRepository<UserInput> UserInputRepository

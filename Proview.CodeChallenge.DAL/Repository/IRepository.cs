@@ -5,6 +5,10 @@ using System.Linq.Expressions;
 
 namespace Proview.CodeChallenge.DAL
 {
+    /// <summary>
+    /// The interface repository that contains common functions that can be used to manipulate data objects
+    /// </summary>
+    /// <typeparam name="T">An entity class</typeparam>
     public interface IRepository<T> where T : class
     {
         int Count(Expression<Func<T, bool>> predicate);

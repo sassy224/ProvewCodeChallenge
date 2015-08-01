@@ -1,4 +1,7 @@
-﻿'use strict';
+﻿/*
+ * This module is used to show/hide the ajax loading icon between ajax requests by automatically intercept the http object
+ */
+'use strict';
 angular.module('ajaxLoader', function () {
 })
 .factory('httpInterceptor', function ($q, $rootScope, $log) {

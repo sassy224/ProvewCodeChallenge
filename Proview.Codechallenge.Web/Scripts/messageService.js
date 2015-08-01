@@ -1,4 +1,6 @@
-﻿    
+﻿/*
+ * This service is used by other controllers to store messages that will be handled by MessageController. 
+ */
 proview.app.factory('MessageService', MessageService);
 
 MessageService.$inject = ['$timeout'];

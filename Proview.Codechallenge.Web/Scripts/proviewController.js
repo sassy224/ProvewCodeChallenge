@@ -1,4 +1,7 @@
-﻿//Recommended way to declare
+﻿/*
+ * The main controller for this application
+ */
+//Recommended way to declare
 proview.app.controller("ProviewController", ProviewController);
 //Inject dependency
 ProviewController.$inject = ['ProviewFactory', 'MessageService', '$confirm'];
@@ -26,7 +29,7 @@ function ProviewController(ProviewFactory, MessageService, $confirm) {
     vm.search = search;
     vm.deleteConfirm = deleteConfirm;
     vm.deleteItem = deleteItem;
-    vm.computeExpression = computeExpression;
+    vm.evalExpression = evalExpression;
     vm.addItem = addItem;
     //Call function
     vm.initiateSearchItems();
@@ -70,14 +73,18 @@ function ProviewController(ProviewFactory, MessageService, $confirm) {
 
     //Global search 
     function search() {
+        //Call function to load items based on the new filter condition
         loadItems(pCurrentPage, pPageItems, pOrderBy, pOrderByReverse);
     }
 
+    //Add item to database when user press Enter
     function addItem() {
+        //Only add when input is not empty
         if (vm.model.userEpxression.length == 0) {
             return;
         }
 
+        //Call factory to handle the business
         var data = ProviewFactory.addItem(vm.model.userEpxression, vm.model.userResult).then(function (data) {
             if (data != null && data == true) {
                 //Clear input
@@ -88,20 +95,24 @@ function ProviewController(ProviewFactory, MessageService, $confirm) {
                 //Reload items
                 loadItems(pCurrentPage, pPageItems, pOrderBy, pOrderByReverse);
             } else {
+                //Show message
                 MessageService.add('danger', 'Error', "Error occured when adding item");
             }
         });
     }
 
-    //Delete item
+    //Show confirm dialog when user wants to delete item from database
     function deleteConfirm(gridItem) {
         $confirm({ text: 'Are you sure you want to delete?', title: 'Confirm', ok: 'Yes', cancel: 'No' })
         .then(function () {
+            //Call function when ok is selected
             deleteItem(gridItem);
         });
     }
 
+    //Delete item from database
     function deleteItem(gridItem) {
+        //Call factory to handle the business
         var data = ProviewFactory.deleteItem(gridItem.Id).then(function (data) {
             if (data != null && data == true) {
                 //Show message
@@ -109,21 +120,26 @@ function ProviewController(ProviewFactory, MessageService, $confirm) {
                 //Reload items
                 loadItems(pCurrentPage, pPageItems, pOrderBy, pOrderByReverse);
             } else {
+                //Show message
                 MessageService.add('danger', 'Error', "Error occured when deleting item");
             }
         });
     }
 
-    function computeExpression() {
+    //Evaluate the input expression
+    function evalExpression() {
         'use strict';
+        //Only eval when there's data
         if (vm.model.userEpxression == null || vm.model.userEpxression == "") {
             vm.model.userResult = "";
             return;
         }
 
         try {
+            //Use mathjs lib to eval the expression
             vm.model.userResult = math.eval(vm.model.userEpxression).toString();
         } catch (e) {
+            //Display the error
             vm.model.userResult = e.toString();
         }
         

@@ -1,4 +1,7 @@
-﻿proview.app.directive('ngEnter', function () {
+﻿/*
+ * The directive for action press Enter key
+ */
+proview.app.directive('ngEnter', function () {
     return function (scope, element, attrs) {
         element.bind("keydown keypress", function (event) {
             if (event.which === 13) {
