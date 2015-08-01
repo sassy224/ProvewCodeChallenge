@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>This program is used to evaluate the value of your expression</h3>
+<h5>Please input your expression into the text field below. The result will be evaluated as you type. When you are finished, press Enter to save your expression into the database.</h5>
+<form>
+    <div ng-controller="ProviewController as proviewCtrl" class="clearfix">
+        <div class="form-group">
+            <label for="userExpression">Your expression</label>
+            <input class="form-control" name="userExpression" type="text" ng-model="proviewCtrl.model.userEpxression"
+                   ng-change="proviewCtrl.computeExpression()" required ng-enter="proviewCtrl.addItem()">
+        </div>
+        <div class="form-group">
+            <label>Result: </label> <span ng-bind="proviewCtrl.model.userResult"></span>
+        </div>
+
+        <div ng-show="proviewCtrl.model.userInputs.length > 0" ng-hide="proviewCtrl.model.userInputs.length == 0">
+            <div class="form-group">
+                <input type="text" placeholder="Search for something..." class="form-control" name="proview-search" id="proview-search"
+                       ng-model="proviewCtrl.search.pSearchText" ng-change="proviewCtrl.search()" ng-model-options="{debounce: 500}">
+            </div>
+
+            <table id="tblProductList" tr-ng-grid="" items="proviewCtrl.model.userInputs"
+                   locale="en"
+                   class="table table-hover table-condensed"
+                   selected-items="mySelectedItems" selection-mode="MultiRow"
+                   enable-filtering="true" on-data-required-delay="1000" current-page="setCurrentPage"
+                   page-items="proviewCtrl.model.pPageSizeObj.selected" total-items="proviewCtrl.model.totalUserInputs"
+                   on-data-required="proviewCtrl.onServerSideItemsRequested(currentPage, pageItems, filterBy, filterByFields, orderBy, orderByReverse)">
+                <thead>
+                    <tr>
+                        <th field-name="Id" display-name="No" cell-width="150px" enable-filtering="false">
+                        </th>
+                        <th field-name="Expression" display-name="Expression" cell-width="400px" enable-filtering="false">
+                        </th>
+                        <th field-name="Result" display-name="Result" cell-width="120px" enable-filtering="false">
+                        </th>
+                        <th enable-filtering="false" enable-sorting="false"></th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <button type="button" ng-click="proviewCtrl.deleteConfirm(gridItem);">Delete</button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td align="center">
+                            <span class="form-group pull-left page-size">
+                                <select id="ddlPageSize" class="form-control"
+                                        ng-model="proviewCtrl.model.pPageSizeObj.selected"
+                                        ng-options="item.value as item.text for item in proviewCtrl.model.pageSizeList"
+                                        ng-change="proviewCtrl.changePageSize()"></select>
+                                <span class="page-size-label">&#160;&#160;items per page</span>
+                            </span>
+                            <span tr-ng-grid-pager="" style="height:40px;"></span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</form>

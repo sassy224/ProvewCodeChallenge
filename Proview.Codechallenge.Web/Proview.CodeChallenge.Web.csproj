@@ -1,0 +1,1145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85FB64DC-F1E8-4384-8486-2DCB09A288C1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>proview.codechallenge.Web</RootNamespace>
+    <AssemblyName>proview.codechallenge.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net_so">
+      <HintPath>..\packages\log4net_so.1.2.11.0\lib\log4net_so.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bower_components\angular-bootstrap\.gitignore" />
+    <Content Include="bower_components\angular-bootstrap\index.js" />
+    <Content Include="bower_components\angular-bootstrap\ui-bootstrap-csp.css" />
+    <Content Include="bower_components\angular-bootstrap\ui-bootstrap-tpls.js" />
+    <Content Include="bower_components\angular-bootstrap\ui-bootstrap-tpls.min.js" />
+    <Content Include="bower_components\angular-bootstrap\ui-bootstrap.js" />
+    <Content Include="bower_components\angular-bootstrap\ui-bootstrap.min.js" />
+    <Content Include="bower_components\angular\angular-csp.css" />
+    <Content Include="bower_components\angular\angular.js" />
+    <Content Include="bower_components\angular\angular.min.js" />
+    <Content Include="bower_components\angular\index.js" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bower_components\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="bower_components\bootstrap\dist\js\npm.js" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bower_components\bootstrap\Gruntfile.js" />
+    <Content Include="bower_components\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="bower_components\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="bower_components\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="bower_components\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="bower_components\bootstrap\js\affix.js" />
+    <Content Include="bower_components\bootstrap\js\alert.js" />
+    <Content Include="bower_components\bootstrap\js\button.js" />
+    <Content Include="bower_components\bootstrap\js\carousel.js" />
+    <Content Include="bower_components\bootstrap\js\collapse.js" />
+    <Content Include="bower_components\bootstrap\js\dropdown.js" />
+    <Content Include="bower_components\bootstrap\js\modal.js" />
+    <Content Include="bower_components\bootstrap\js\popover.js" />
+    <Content Include="bower_components\bootstrap\js\scrollspy.js" />
+    <Content Include="bower_components\bootstrap\js\tab.js" />
+    <Content Include="bower_components\bootstrap\js\tooltip.js" />
+    <Content Include="bower_components\bootstrap\js\transition.js" />
+    <Content Include="bower_components\bootstrap\package.js" />
+    <Content Include="bower_components\jquery\dist\jquery.js" />
+    <Content Include="bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="bower_components\jquery\MIT-LICENSE.txt" />
+    <Content Include="bower_components\jquery\src\ajax.js" />
+    <Content Include="bower_components\jquery\src\ajax\jsonp.js" />
+    <Content Include="bower_components\jquery\src\ajax\load.js" />
+    <Content Include="bower_components\jquery\src\ajax\parseJSON.js" />
+    <Content Include="bower_components\jquery\src\ajax\parseXML.js" />
+    <Content Include="bower_components\jquery\src\ajax\script.js" />
+    <Content Include="bower_components\jquery\src\ajax\var\nonce.js" />
+    <Content Include="bower_components\jquery\src\ajax\var\rquery.js" />
+    <Content Include="bower_components\jquery\src\ajax\xhr.js" />
+    <Content Include="bower_components\jquery\src\attributes.js" />
+    <Content Include="bower_components\jquery\src\attributes\attr.js" />
+    <Content Include="bower_components\jquery\src\attributes\classes.js" />
+    <Content Include="bower_components\jquery\src\attributes\prop.js" />
+    <Content Include="bower_components\jquery\src\attributes\support.js" />
+    <Content Include="bower_components\jquery\src\attributes\val.js" />
+    <Content Include="bower_components\jquery\src\callbacks.js" />
+    <Content Include="bower_components\jquery\src\core.js" />
+    <Content Include="bower_components\jquery\src\core\access.js" />
+    <Content Include="bower_components\jquery\src\core\init.js" />
+    <Content Include="bower_components\jquery\src\core\parseHTML.js" />
+    <Content Include="bower_components\jquery\src\core\ready.js" />
+    <Content Include="bower_components\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="bower_components\jquery\src\css.js" />
+    <Content Include="bower_components\jquery\src\css\addGetHookIf.js" />
+    <Content Include="bower_components\jquery\src\css\curCSS.js" />
+    <Content Include="bower_components\jquery\src\css\defaultDisplay.js" />
+    <Content Include="bower_components\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="bower_components\jquery\src\css\support.js" />
+    <Content Include="bower_components\jquery\src\css\swap.js" />
+    <Content Include="bower_components\jquery\src\css\var\cssExpand.js" />
+    <Content Include="bower_components\jquery\src\css\var\getStyles.js" />
+    <Content Include="bower_components\jquery\src\css\var\isHidden.js" />
+    <Content Include="bower_components\jquery\src\css\var\rmargin.js" />
+    <Content Include="bower_components\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="bower_components\jquery\src\data.js" />
+    <Content Include="bower_components\jquery\src\data\accepts.js" />
+    <Content Include="bower_components\jquery\src\data\Data.js" />
+    <Content Include="bower_components\jquery\src\data\var\data_priv.js" />
+    <Content Include="bower_components\jquery\src\data\var\data_user.js" />
+    <Content Include="bower_components\jquery\src\deferred.js" />
+    <Content Include="bower_components\jquery\src\deprecated.js" />
+    <Content Include="bower_components\jquery\src\dimensions.js" />
+    <Content Include="bower_components\jquery\src\effects.js" />
+    <Content Include="bower_components\jquery\src\effects\animatedSelector.js" />
+    <Content Include="bower_components\jquery\src\effects\Tween.js" />
+    <Content Include="bower_components\jquery\src\event.js" />
+    <Content Include="bower_components\jquery\src\event\ajax.js" />
+    <Content Include="bower_components\jquery\src\event\alias.js" />
+    <Content Include="bower_components\jquery\src\event\support.js" />
+    <Content Include="bower_components\jquery\src\exports\amd.js" />
+    <Content Include="bower_components\jquery\src\exports\global.js" />
+    <Content Include="bower_components\jquery\src\intro.js" />
+    <Content Include="bower_components\jquery\src\jquery.js" />
+    <Content Include="bower_components\jquery\src\manipulation.js" />
+    <Content Include="bower_components\jquery\src\manipulation\support.js" />
+    <Content Include="bower_components\jquery\src\manipulation\var\rcheckableType.js" />
+    <Content Include="bower_components\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="bower_components\jquery\src\offset.js" />
+    <Content Include="bower_components\jquery\src\outro.js" />
+    <Content Include="bower_components\jquery\src\queue.js" />
+    <Content Include="bower_components\jquery\src\queue\delay.js" />
+    <Content Include="bower_components\jquery\src\selector-native.js" />
+    <Content Include="bower_components\jquery\src\selector-sizzle.js" />
+    <Content Include="bower_components\jquery\src\selector.js" />
+    <Content Include="bower_components\jquery\src\serialize.js" />
+    <Content Include="bower_components\jquery\src\sizzle\dist\sizzle.js" />
+    <Content Include="bower_components\jquery\src\sizzle\dist\sizzle.min.js" />
+    <Content Include="bower_components\jquery\src\traversing.js" />
+    <Content Include="bower_components\jquery\src\traversing\findFilter.js" />
+    <Content Include="bower_components\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="bower_components\jquery\src\var\arr.js" />
+    <Content Include="bower_components\jquery\src\var\class2type.js" />
+    <Content Include="bower_components\jquery\src\var\concat.js" />
+    <Content Include="bower_components\jquery\src\var\hasOwn.js" />
+    <Content Include="bower_components\jquery\src\var\indexOf.js" />
+    <Content Include="bower_components\jquery\src\var\pnum.js" />
+    <Content Include="bower_components\jquery\src\var\push.js" />
+    <Content Include="bower_components\jquery\src\var\rnotwhite.js" />
+    <Content Include="bower_components\jquery\src\var\slice.js" />
+    <Content Include="bower_components\jquery\src\var\strundefined.js" />
+    <Content Include="bower_components\jquery\src\var\support.js" />
+    <Content Include="bower_components\jquery\src\var\toString.js" />
+    <Content Include="bower_components\jquery\src\wrap.js" />
+    <Content Include="bower_components\mathjs\bin\cli.js" />
+    <Content Include="bower_components\mathjs\bin\repl.js" />
+    <Content Include="bower_components\mathjs\core.js" />
+    <Content Include="bower_components\mathjs\dist\math.js" />
+    <Content Include="bower_components\mathjs\dist\math.min.js" />
+    <Content Include="bower_components\mathjs\examples\advanced\add_new_datatypes\index.js" />
+    <Content Include="bower_components\mathjs\examples\advanced\add_new_datatypes\myAdd.js" />
+    <Content Include="bower_components\mathjs\examples\advanced\add_new_datatypes\MyType.js" />
+    <Content Include="bower_components\mathjs\examples\advanced\custom_argument_parsing.js" />
+    <Content Include="bower_components\mathjs\examples\advanced\custom_loading.js" />
+    <Content Include="bower_components\mathjs\examples\advanced\expression_trees.js" />
+    <Content Include="bower_components\mathjs\examples\advanced\fallback_from_fraction_to_bignumber.js" />
+    <Content Include="bower_components\mathjs\examples\advanced\function_transform.js" />
+    <Content Include="bower_components\mathjs\examples\basic_usage.js" />
+    <Content Include="bower_components\mathjs\examples\bignumbers.js" />
+    <Content Include="bower_components\mathjs\examples\browser\angle_configuration.html" />
+    <Content Include="bower_components\mathjs\examples\browser\basic_usage.html" />
+    <Content Include="bower_components\mathjs\examples\browser\custom_separators.html" />
+    <Content Include="bower_components\mathjs\examples\browser\old_browsers.html" />
+    <Content Include="bower_components\mathjs\examples\browser\plot.html" />
+    <Content Include="bower_components\mathjs\examples\browser\pretty_printing_with_mathjax.html" />
+    <Content Include="bower_components\mathjs\examples\browser\requirejs_loading.html" />
+    <Content Include="bower_components\mathjs\examples\browser\webworkers\webworkers.html" />
+    <Content Include="bower_components\mathjs\examples\browser\webworkers\worker.js" />
+    <Content Include="bower_components\mathjs\examples\chaining.js" />
+    <Content Include="bower_components\mathjs\examples\complex_numbers.js" />
+    <Content Include="bower_components\mathjs\examples\expressions.js" />
+    <Content Include="bower_components\mathjs\examples\fractions.js" />
+    <Content Include="bower_components\mathjs\examples\import.js" />
+    <Content Include="bower_components\mathjs\examples\matrices.js" />
+    <Content Include="bower_components\mathjs\examples\serialization.js" />
+    <Content Include="bower_components\mathjs\examples\sparse_matrices.js" />
+    <Content Include="bower_components\mathjs\examples\units.js" />
+    <Content Include="bower_components\mathjs\index.js" />
+    <Content Include="bower_components\mathjs\lib\constants.js" />
+    <Content Include="bower_components\mathjs\lib\core\config.js" />
+    <Content Include="bower_components\mathjs\lib\core\core.js" />
+    <Content Include="bower_components\mathjs\lib\core\import.js" />
+    <Content Include="bower_components\mathjs\lib\core\typed.js" />
+    <Content Include="bower_components\mathjs\lib\error\ArgumentsError.js" />
+    <Content Include="bower_components\mathjs\lib\error\DimensionError.js" />
+    <Content Include="bower_components\mathjs\lib\error\index.js" />
+    <Content Include="bower_components\mathjs\lib\error\IndexError.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\e.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\false.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\i.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\Infinity.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\LN10.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\LN2.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\LOG10E.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\LOG2E.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\NaN.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\null.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\phi.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\pi.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\SQRT1_2.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\SQRT2.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\tau.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\true.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\constants\version.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\algebra\lsolve.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\algebra\lup.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\algebra\lusolve.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\algebra\slu.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\algebra\usolve.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\abs.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\add.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\ceil.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\cube.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\divide.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\dotDivide.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\dotMultiply.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\dotPow.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\exp.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\fix.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\floor.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\gcd.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\lcm.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\log.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\log10.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\mod.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\multiply.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\norm.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\nthRoot.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\pow.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\round.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\sign.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\sqrt.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\square.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\subtract.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\unaryMinus.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\unaryPlus.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\arithmetic\xgcd.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\bitwise\bitAnd.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\bitwise\bitNot.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\bitwise\bitOr.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\bitwise\bitXor.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\bitwise\leftShift.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\bitwise\rightArithShift.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\bitwise\rightLogShift.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\combinatorics\bellNumbers.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\combinatorics\composition.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\combinatorics\stirlingS2.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\complex\arg.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\complex\conj.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\complex\im.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\complex\re.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\expression\eval.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\expression\help.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\geometry\intersect.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\logical\and.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\logical\not.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\logical\or.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\logical\xor.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\concat.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\cross.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\det.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\diag.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\dot.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\eye.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\flatten.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\inv.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\ones.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\range.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\resize.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\size.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\squeeze.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\subset.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\trace.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\transpose.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\matrix\zeros.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\probability\combinations.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\probability\distribution.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\probability\factorial.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\probability\gamma.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\probability\multinomial.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\probability\permutations.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\probability\pickRandom.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\probability\random.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\probability\randomInt.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\relational\compare.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\relational\deepEqual.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\relational\equal.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\relational\larger.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\relational\largerEq.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\relational\smaller.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\relational\smallerEq.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\relational\unequal.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\statistics\max.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\statistics\mean.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\statistics\median.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\statistics\min.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\statistics\prod.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\statistics\quantileSeq.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\statistics\std.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\statistics\sum.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\statistics\var.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\acos.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\acosh.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\acot.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\acoth.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\acsc.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\acsch.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\asec.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\asech.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\asin.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\asinh.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\atan.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\atan2.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\atanh.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\cos.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\cosh.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\cot.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\coth.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\csc.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\csch.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\sec.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\sech.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\sin.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\sinh.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\tan.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\trigonometry\tanh.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\units\to.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\clone.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\filter.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\forEach.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\format.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\import.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\isInteger.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\isNegative.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\isNumeric.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\isPositive.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\isZero.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\map.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\partitionSelect.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\print.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\sort.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\function\utils\typeof.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\index.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\type\bignumber.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\type\boolean.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\type\complex.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\type\fraction.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\type\index.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\type\matrix.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\type\number.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\type\sparse.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\type\string.js" />
+    <Content Include="bower_components\mathjs\lib\expression\docs\type\unit.js" />
+    <Content Include="bower_components\mathjs\lib\expression\function\compile.js" />
+    <Content Include="bower_components\mathjs\lib\expression\function\eval.js" />
+    <Content Include="bower_components\mathjs\lib\expression\function\help.js" />
+    <Content Include="bower_components\mathjs\lib\expression\function\index.js" />
+    <Content Include="bower_components\mathjs\lib\expression\function\parse.js" />
+    <Content Include="bower_components\mathjs\lib\expression\function\parser.js" />
+    <Content Include="bower_components\mathjs\lib\expression\Help.js" />
+    <Content Include="bower_components\mathjs\lib\expression\index.js" />
+    <Content Include="bower_components\mathjs\lib\expression\keywords.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\ArrayNode.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\AssignmentNode.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\BlockNode.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\ConditionalNode.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\ConstantNode.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\FunctionAssignmentNode.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\FunctionNode.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\index.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\IndexNode.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\Node.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\OperatorNode.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\ParenthesisNode.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\RangeNode.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\SymbolNode.js" />
+    <Content Include="bower_components\mathjs\lib\expression\node\UpdateNode.js" />
+    <Content Include="bower_components\mathjs\lib\expression\operators.js" />
+    <Content Include="bower_components\mathjs\lib\expression\parse.js" />
+    <Content Include="bower_components\mathjs\lib\expression\Parser.js" />
+    <Content Include="bower_components\mathjs\lib\expression\transform\concat.transform.js" />
+    <Content Include="bower_components\mathjs\lib\expression\transform\error.transform.js" />
+    <Content Include="bower_components\mathjs\lib\expression\transform\filter.transform.js" />
+    <Content Include="bower_components\mathjs\lib\expression\transform\forEach.transform.js" />
+    <Content Include="bower_components\mathjs\lib\expression\transform\index.js" />
+    <Content Include="bower_components\mathjs\lib\expression\transform\index.transform.js" />
+    <Content Include="bower_components\mathjs\lib\expression\transform\map.transform.js" />
+    <Content Include="bower_components\mathjs\lib\expression\transform\max.transform.js" />
+    <Content Include="bower_components\mathjs\lib\expression\transform\mean.transform.js" />
+    <Content Include="bower_components\mathjs\lib\expression\transform\min.transform.js" />
+    <Content Include="bower_components\mathjs\lib\expression\transform\range.transform.js" />
+    <Content Include="bower_components\mathjs\lib\expression\transform\subset.transform.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\decomposition\lup.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\decomposition\slu.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\solver\lsolve.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\solver\lusolve.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\solver\usolve.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\solver\utils\solveValidation.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_amd.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_chol.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_counts.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_cumsum.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_dfs.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_ereach.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_etree.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_fkeep.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_flip.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_ipvec.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_leaf.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_lu.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_mark.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_marked.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_permute.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_post.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_reach.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_spsolve.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_sqr.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_symperm.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_tdfs.js" />
+    <Content Include="bower_components\mathjs\lib\function\algebra\sparse\cs_unflip.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\abs.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\add.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\addScalar.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\ceil.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\cube.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\divide.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\divideScalar.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\dotDivide.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\dotMultiply.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\dotPow.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\exp.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\fix.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\floor.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\gcd.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\lcm.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\log.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\log10.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\mod.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\multiply.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\multiplyScalar.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\norm.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\nthRoot.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\pow.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\round.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\sign.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\sqrt.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\square.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\subtract.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\unaryMinus.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\unaryPlus.js" />
+    <Content Include="bower_components\mathjs\lib\function\arithmetic\xgcd.js" />
+    <Content Include="bower_components\mathjs\lib\function\bitwise\bitAnd.js" />
+    <Content Include="bower_components\mathjs\lib\function\bitwise\bitNot.js" />
+    <Content Include="bower_components\mathjs\lib\function\bitwise\bitOr.js" />
+    <Content Include="bower_components\mathjs\lib\function\bitwise\bitXor.js" />
+    <Content Include="bower_components\mathjs\lib\function\bitwise\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\bitwise\leftShift.js" />
+    <Content Include="bower_components\mathjs\lib\function\bitwise\rightArithShift.js" />
+    <Content Include="bower_components\mathjs\lib\function\bitwise\rightLogShift.js" />
+    <Content Include="bower_components\mathjs\lib\function\combinatorics\bellNumbers.js" />
+    <Content Include="bower_components\mathjs\lib\function\combinatorics\composition.js" />
+    <Content Include="bower_components\mathjs\lib\function\combinatorics\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\combinatorics\stirlingS2.js" />
+    <Content Include="bower_components\mathjs\lib\function\complex\arg.js" />
+    <Content Include="bower_components\mathjs\lib\function\complex\conj.js" />
+    <Content Include="bower_components\mathjs\lib\function\complex\im.js" />
+    <Content Include="bower_components\mathjs\lib\function\complex\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\complex\re.js" />
+    <Content Include="bower_components\mathjs\lib\function\geometry\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\geometry\intersect.js" />
+    <Content Include="bower_components\mathjs\lib\function\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\logical\and.js" />
+    <Content Include="bower_components\mathjs\lib\function\logical\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\logical\not.js" />
+    <Content Include="bower_components\mathjs\lib\function\logical\or.js" />
+    <Content Include="bower_components\mathjs\lib\function\logical\xor.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\concat.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\cross.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\det.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\diag.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\dot.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\eye.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\flatten.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\inv.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\ones.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\range.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\resize.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\size.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\squeeze.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\subset.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\trace.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\transpose.js" />
+    <Content Include="bower_components\mathjs\lib\function\matrix\zeros.js" />
+    <Content Include="bower_components\mathjs\lib\function\probability\combinations.js" />
+    <Content Include="bower_components\mathjs\lib\function\probability\distribution.js" />
+    <Content Include="bower_components\mathjs\lib\function\probability\factorial.js" />
+    <Content Include="bower_components\mathjs\lib\function\probability\gamma.js" />
+    <Content Include="bower_components\mathjs\lib\function\probability\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\probability\multinomial.js" />
+    <Content Include="bower_components\mathjs\lib\function\probability\permutations.js" />
+    <Content Include="bower_components\mathjs\lib\function\probability\pickRandom.js" />
+    <Content Include="bower_components\mathjs\lib\function\probability\random.js" />
+    <Content Include="bower_components\mathjs\lib\function\probability\randomInt.js" />
+    <Content Include="bower_components\mathjs\lib\function\relational\compare.js" />
+    <Content Include="bower_components\mathjs\lib\function\relational\deepEqual.js" />
+    <Content Include="bower_components\mathjs\lib\function\relational\equal.js" />
+    <Content Include="bower_components\mathjs\lib\function\relational\equalScalar.js" />
+    <Content Include="bower_components\mathjs\lib\function\relational\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\relational\larger.js" />
+    <Content Include="bower_components\mathjs\lib\function\relational\largerEq.js" />
+    <Content Include="bower_components\mathjs\lib\function\relational\smaller.js" />
+    <Content Include="bower_components\mathjs\lib\function\relational\smallerEq.js" />
+    <Content Include="bower_components\mathjs\lib\function\relational\unequal.js" />
+    <Content Include="bower_components\mathjs\lib\function\statistics\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\statistics\max.js" />
+    <Content Include="bower_components\mathjs\lib\function\statistics\mean.js" />
+    <Content Include="bower_components\mathjs\lib\function\statistics\median.js" />
+    <Content Include="bower_components\mathjs\lib\function\statistics\min.js" />
+    <Content Include="bower_components\mathjs\lib\function\statistics\prod.js" />
+    <Content Include="bower_components\mathjs\lib\function\statistics\quantileSeq.js" />
+    <Content Include="bower_components\mathjs\lib\function\statistics\std.js" />
+    <Content Include="bower_components\mathjs\lib\function\statistics\sum.js" />
+    <Content Include="bower_components\mathjs\lib\function\statistics\var.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\acos.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\acosh.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\acot.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\acoth.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\acsc.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\acsch.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\asec.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\asech.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\asin.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\asinh.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\atan.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\atan2.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\atanh.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\cos.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\cosh.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\cot.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\coth.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\csc.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\csch.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\sec.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\sech.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\sin.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\sinh.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\tan.js" />
+    <Content Include="bower_components\mathjs\lib\function\trigonometry\tanh.js" />
+    <Content Include="bower_components\mathjs\lib\function\units\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\units\to.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\clone.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\filter.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\forEach.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\format.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\index.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\isInteger.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\isNegative.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\isNumeric.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\isPositive.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\isZero.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\map.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\partitionSelect.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\print.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\sort.js" />
+    <Content Include="bower_components\mathjs\lib\function\utils\typeof.js" />
+    <Content Include="bower_components\mathjs\lib\header.js" />
+    <Content Include="bower_components\mathjs\lib\index.js" />
+    <Content Include="bower_components\mathjs\lib\json\index.js" />
+    <Content Include="bower_components\mathjs\lib\json\reviver.js" />
+    <Content Include="bower_components\mathjs\lib\type\bignumber\BigNumber.js" />
+    <Content Include="bower_components\mathjs\lib\type\bignumber\function\bignumber.js" />
+    <Content Include="bower_components\mathjs\lib\type\bignumber\index.js" />
+    <Content Include="bower_components\mathjs\lib\type\boolean.js" />
+    <Content Include="bower_components\mathjs\lib\type\chain\Chain.js" />
+    <Content Include="bower_components\mathjs\lib\type\chain\function\chain.js" />
+    <Content Include="bower_components\mathjs\lib\type\chain\index.js" />
+    <Content Include="bower_components\mathjs\lib\type\complex\Complex.js" />
+    <Content Include="bower_components\mathjs\lib\type\complex\function\complex.js" />
+    <Content Include="bower_components\mathjs\lib\type\complex\index.js" />
+    <Content Include="bower_components\mathjs\lib\type\fraction\Fraction.js" />
+    <Content Include="bower_components\mathjs\lib\type\fraction\function\fraction.js" />
+    <Content Include="bower_components\mathjs\lib\type\fraction\index.js" />
+    <Content Include="bower_components\mathjs\lib\type\index.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\DenseMatrix.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\FibonacciHeap.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\function\index.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\function\matrix.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\function\sparse.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\ImmutableDenseMatrix.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\index.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\Matrix.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\MatrixIndex.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\Range.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\Spa.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\SparseMatrix.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm01.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm02.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm03.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm04.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm05.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm06.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm07.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm08.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm09.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm10.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm11.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm12.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm13.js" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\algorithm14.js" />
+    <Content Include="bower_components\mathjs\lib\type\number.js" />
+    <Content Include="bower_components\mathjs\lib\type\resultset\index.js" />
+    <Content Include="bower_components\mathjs\lib\type\resultset\ResultSet.js" />
+    <Content Include="bower_components\mathjs\lib\type\string.js" />
+    <Content Include="bower_components\mathjs\lib\type\unit\function\unit.js" />
+    <Content Include="bower_components\mathjs\lib\type\unit\index.js" />
+    <Content Include="bower_components\mathjs\lib\type\unit\Unit.js" />
+    <Content Include="bower_components\mathjs\lib\utils\array.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\acosAsec.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\acoshAsinhAsechAcsch.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\asin.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\asinAcsc.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\asinNewton.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\atan.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\atan2.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\atanAcot.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\atanhAcoth.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\bitAnd.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\bitNot.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\bitOr.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\bitwise.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\bitXor.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\constants.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\coshSinhCschSech.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\cosSin.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\cosSinSecCsc.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\formatter.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\leftShift.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\reduceToPeriod.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\rightArithShift.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\sinToCos.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\tanCot.js" />
+    <Content Include="bower_components\mathjs\lib\utils\bignumber\tanhCoth.js" />
+    <Content Include="bower_components\mathjs\lib\utils\boolean.js" />
+    <Content Include="bower_components\mathjs\lib\utils\collection\deepForEach.js" />
+    <Content Include="bower_components\mathjs\lib\utils\collection\deepMap.js" />
+    <Content Include="bower_components\mathjs\lib\utils\collection\isCollection.js" />
+    <Content Include="bower_components\mathjs\lib\utils\collection\reduce.js" />
+    <Content Include="bower_components\mathjs\lib\utils\collection\scatter.js" />
+    <Content Include="bower_components\mathjs\lib\utils\emitter.js" />
+    <Content Include="bower_components\mathjs\lib\utils\function.js" />
+    <Content Include="bower_components\mathjs\lib\utils\index.js" />
+    <Content Include="bower_components\mathjs\lib\utils\latex.js" />
+    <Content Include="bower_components\mathjs\lib\utils\number.js" />
+    <Content Include="bower_components\mathjs\lib\utils\NumberFormatter.js" />
+    <Content Include="bower_components\mathjs\lib\utils\object.js" />
+    <Content Include="bower_components\mathjs\lib\utils\string.js" />
+    <Content Include="bower_components\mathjs\lib\utils\types.js" />
+    <Content Include="bower_components\mathjs\lib\version.js" />
+    <Content Include="bower_components\tr-ng-grid\relnotes.html" />
+    <Content Include="bower_components\tr-ng-grid\trNgGrid.css" />
+    <Content Include="bower_components\tr-ng-grid\trNgGrid.js" />
+    <Content Include="bower_components\tr-ng-grid\trNgGrid.min.css" />
+    <Content Include="bower_components\tr-ng-grid\trNgGrid.min.js" />
+    <Content Include="Content\proview.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Scripts\ajaxLoader.js" />
+    <Content Include="Scripts\angular-confirm.js" />
+    <Content Include="Scripts\proviewDirective.js" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\proviewController.js" />
+    <Content Include="Scripts\proviewFactory.js" />
+    <Content Include="Scripts\messageController.js" />
+    <Content Include="Scripts\messageService.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\UserInputVM.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="bower_components\angular\.bower.json" />
+    <Content Include="bower_components\angular\angular.min.js.gzip" />
+    <Content Include="bower_components\angular\angular.min.js.map" />
+    <Content Include="bower_components\angular\bower.json" />
+    <Content Include="bower_components\angular\package.json" />
+    <Content Include="bower_components\angular\README.md" />
+    <Content Include="bower_components\tr-ng-grid\.bower.json" />
+    <Content Include="bower_components\tr-ng-grid\bower.json" />
+    <Content Include="bower_components\tr-ng-grid\LICENSE" />
+    <Content Include="bower_components\tr-ng-grid\package.json" />
+    <Content Include="bower_components\tr-ng-grid\README.md" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="bower_components\bootstrap\.bower.json" />
+    <Content Include="bower_components\bootstrap\bower.json" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="bower_components\bootstrap\grunt\.jshintrc" />
+    <Content Include="bower_components\bootstrap\grunt\configBridge.json" />
+    <Content Include="bower_components\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="bower_components\bootstrap\js\.jscsrc" />
+    <Content Include="bower_components\bootstrap\js\.jshintrc" />
+    <Content Include="bower_components\bootstrap\less\.csscomb.json" />
+    <Content Include="bower_components\bootstrap\less\.csslintrc" />
+    <Content Include="bower_components\bootstrap\less\alerts.less" />
+    <Content Include="bower_components\bootstrap\less\badges.less" />
+    <Content Include="bower_components\bootstrap\less\bootstrap.less" />
+    <Content Include="bower_components\bootstrap\less\breadcrumbs.less" />
+    <Content Include="bower_components\bootstrap\less\button-groups.less" />
+    <Content Include="bower_components\bootstrap\less\buttons.less" />
+    <Content Include="bower_components\bootstrap\less\carousel.less" />
+    <Content Include="bower_components\bootstrap\less\close.less" />
+    <Content Include="bower_components\bootstrap\less\code.less" />
+    <Content Include="bower_components\bootstrap\less\component-animations.less" />
+    <Content Include="bower_components\bootstrap\less\dropdowns.less" />
+    <Content Include="bower_components\bootstrap\less\forms.less" />
+    <Content Include="bower_components\bootstrap\less\glyphicons.less" />
+    <Content Include="bower_components\bootstrap\less\grid.less" />
+    <Content Include="bower_components\bootstrap\less\input-groups.less" />
+    <Content Include="bower_components\bootstrap\less\jumbotron.less" />
+    <Content Include="bower_components\bootstrap\less\labels.less" />
+    <Content Include="bower_components\bootstrap\less\list-group.less" />
+    <Content Include="bower_components\bootstrap\less\media.less" />
+    <Content Include="bower_components\bootstrap\less\mixins.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\alerts.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\buttons.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\center-block.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\forms.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\gradients.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\grid.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\image.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\labels.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\list-group.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\opacity.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\pagination.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\panels.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\resize.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\size.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\table-row.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="bower_components\bootstrap\less\modals.less" />
+    <Content Include="bower_components\bootstrap\less\navbar.less" />
+    <Content Include="bower_components\bootstrap\less\navs.less" />
+    <Content Include="bower_components\bootstrap\less\normalize.less" />
+    <Content Include="bower_components\bootstrap\less\pager.less" />
+    <Content Include="bower_components\bootstrap\less\pagination.less" />
+    <Content Include="bower_components\bootstrap\less\panels.less" />
+    <Content Include="bower_components\bootstrap\less\popovers.less" />
+    <Content Include="bower_components\bootstrap\less\print.less" />
+    <Content Include="bower_components\bootstrap\less\progress-bars.less" />
+    <Content Include="bower_components\bootstrap\less\responsive-embed.less" />
+    <Content Include="bower_components\bootstrap\less\responsive-utilities.less" />
+    <Content Include="bower_components\bootstrap\less\scaffolding.less" />
+    <Content Include="bower_components\bootstrap\less\tables.less" />
+    <Content Include="bower_components\bootstrap\less\theme.less" />
+    <Content Include="bower_components\bootstrap\less\thumbnails.less" />
+    <Content Include="bower_components\bootstrap\less\tooltip.less" />
+    <Content Include="bower_components\bootstrap\less\type.less" />
+    <Content Include="bower_components\bootstrap\less\utilities.less" />
+    <Content Include="bower_components\bootstrap\less\variables.less" />
+    <Content Include="bower_components\bootstrap\less\wells.less" />
+    <Content Include="bower_components\bootstrap\LICENSE" />
+    <Content Include="bower_components\bootstrap\package.json" />
+    <Content Include="bower_components\bootstrap\README.md" />
+    <Content Include="bower_components\angular-bootstrap\.bower.json" />
+    <Content Include="bower_components\angular-bootstrap\.npmignore" />
+    <Content Include="bower_components\angular-bootstrap\bower.json" />
+    <Content Include="bower_components\angular-bootstrap\package.json" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="bower_components\jquery\.bower.json" />
+    <Content Include="bower_components\jquery\bower.json" />
+    <Content Include="bower_components\jquery\dist\jquery.min.map" />
+    <Content Include="bower_components\jquery\src\sizzle\dist\sizzle.min.map" />
+    <Content Include="bower_components\mathjs\.bower.json" />
+    <Content Include="bower_components\mathjs\bower.json" />
+    <Content Include="bower_components\mathjs\composer.json" />
+    <Content Include="bower_components\mathjs\CONTRIBUTING.md" />
+    <Content Include="bower_components\mathjs\dist\math.map" />
+    <Content Include="bower_components\mathjs\docs\chained_operations.md" />
+    <Content Include="bower_components\mathjs\docs\chaining.md" />
+    <Content Include="bower_components\mathjs\docs\command_line_interface.md" />
+    <Content Include="bower_components\mathjs\docs\configuration.md" />
+    <Content Include="bower_components\mathjs\docs\custom_loading_and_bundling.md" />
+    <Content Include="bower_components\mathjs\docs\datatypes\bignumbers.md" />
+    <Content Include="bower_components\mathjs\docs\datatypes\complex_numbers.md" />
+    <Content Include="bower_components\mathjs\docs\datatypes\fractions.md" />
+    <Content Include="bower_components\mathjs\docs\datatypes\index.md" />
+    <Content Include="bower_components\mathjs\docs\datatypes\matrices.md" />
+    <Content Include="bower_components\mathjs\docs\datatypes\numbers.md" />
+    <Content Include="bower_components\mathjs\docs\datatypes\units.md" />
+    <Content Include="bower_components\mathjs\docs\expressions.md" />
+    <Content Include="bower_components\mathjs\docs\expressions\customization.md" />
+    <Content Include="bower_components\mathjs\docs\expressions\expression_trees.md" />
+    <Content Include="bower_components\mathjs\docs\expressions\index.md" />
+    <Content Include="bower_components\mathjs\docs\expressions\parsing.md" />
+    <Content Include="bower_components\mathjs\docs\expressions\syntax.md" />
+    <Content Include="bower_components\mathjs\docs\extension.md" />
+    <Content Include="bower_components\mathjs\docs\getting_started.md" />
+    <Content Include="bower_components\mathjs\docs\index.md" />
+    <Content Include="bower_components\mathjs\docs\introduction.md" />
+    <Content Include="bower_components\mathjs\docs\reference\constants.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\abs.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\acos.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\acosh.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\acot.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\acoth.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\acsc.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\acsch.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\add.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\alphabetical.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\and.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\arg.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\asec.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\asech.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\asin.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\asinh.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\atan.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\atan2.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\atanh.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\bellNumbers.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\bignumber.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\bitAnd.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\bitNot.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\bitOr.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\bitXor.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\boolean.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\categorical.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\ceil.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\chain.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\clone.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\combinations.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\compare.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\compile.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\complex.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\composition.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\concat.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\conj.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\cos.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\cosh.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\cot.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\coth.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\cross.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\csc.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\csch.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\cube.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\deepEqual.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\det.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\diag.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\distribution.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\divide.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\dot.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\dotDivide.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\dotMultiply.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\dotPow.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\equal.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\eval.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\exp.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\eye.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\factorial.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\filter.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\fix.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\flatten.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\floor.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\forEach.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\format.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\fraction.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\gamma.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\gcd.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\help.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\im.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\index.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\intersect.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\inv.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\isInteger.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\isNegative.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\isNumeric.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\isPositive.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\isZero.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\larger.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\largerEq.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\lcm.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\leftShift.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\log.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\log10.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\lsolve.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\lup.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\lusolve.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\map.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\matrix.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\max.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\mean.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\median.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\min.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\mod.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\multinomial.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\multiply.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\norm.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\not.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\nthRoot.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\number.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\ones.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\or.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\parse.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\parser.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\partitionSelect.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\permutations.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\pickRandom.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\pow.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\print.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\prod.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\quantileSeq.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\random.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\randomInt.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\range.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\re.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\resize.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\rightArithShift.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\rightLogShift.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\round.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\sec.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\sech.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\sign.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\sin.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\sinh.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\size.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\slu.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\smaller.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\smallerEq.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\sort.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\sqrt.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\square.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\squeeze.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\std.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\stirlingS2.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\string.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\subset.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\subtract.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\sum.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\tan.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\tanh.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\to.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\trace.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\transpose.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\typeof.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\unaryMinus.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\unaryPlus.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\unequal.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\unit.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\usolve.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\var.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\xgcd.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\xor.md" />
+    <Content Include="bower_components\mathjs\docs\reference\functions\zeros.md" />
+    <Content Include="bower_components\mathjs\docs\reference\index.md" />
+    <Content Include="bower_components\mathjs\docs\reference\units.md" />
+    <Content Include="bower_components\mathjs\docs\serialization.md" />
+    <Content Include="bower_components\mathjs\HISTORY.md" />
+    <Content Include="bower_components\mathjs\lib\type\matrix\utils\README.md" />
+    <Content Include="bower_components\mathjs\LICENSE" />
+    <Content Include="bower_components\mathjs\NOTICE" />
+    <Content Include="bower_components\mathjs\README.md" />
+    <Content Include="bower_components\mathjs\ROADMAP.md" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Proview.CodeChallenge.BLL\Proview.CodeChallenge.BLL.csproj">
+      <Project>{0ef9162f-8e51-4583-bf18-856a940788e9}</Project>
+      <Name>Proview.CodeChallenge.BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59886</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56610/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

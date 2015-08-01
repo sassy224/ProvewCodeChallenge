@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html ng-app="proviewApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Proview Code Challenge</title>
+    @Styles.Render("~/Content/base-lib-css")
+    @Styles.Render("~/Content/proview-css")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Proview Code Challenge", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Proview Code Challenge</p>
+        </footer>
+    </div>
+
+    <!--Notification box-->
+    <div id="messageContainer" ng-controller="MessageController as msgCtrl" ng-show="msgCtrl.messages.length > 0">
+        <div class="alerts">
+            <div class="alert alert-{{(m.type)||'info'}} alert-dismissable fade in pull-right" ng-repeat="m in msgCtrl.messages">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <label>{{m.title}}</label>
+                <div>{{m.msg}}</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Ajax loader-->
+    <div class="loader-div" loader style="display:none;">
+        <img src="/Images/loading.gif" class="ajax-loader" />
+    </div>
+
+    <!--Javascript files-->
+    @Scripts.Render("~/bundles/base-lib-js")
+    @Scripts.Render("~/bundles/proview-js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
